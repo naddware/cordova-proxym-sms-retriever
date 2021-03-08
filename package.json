@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-sms-retriever-api",
+  "version": "1.0.0",
+  "description": "Cordova plugin to retrieve SMS in Android using the SMS Retriever API without following a specific SMS format.",
+  "cordova": {
+    "id": "cordova-plugin-sms-retriever-api",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "sms",
+    "retriever"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6.0.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=4"
+    }
+  ],
+  "author": {
+    "name": "Zied Ben Mohamed"
+  },
+  "license": "MIT"
+}

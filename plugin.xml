@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="cordova-plugin-sms-retriever-api"
+	version="1.0.0">
+
+	<name>SMS Retriever API</name>
+	<description>Cordova plugin to retrieve SMS in Android using the SMS Retriever API without following a specific SMS format.</description>
+	<author>Zied Ben Mohamed</author>
+	<license>MIT</license>
+	<keywords>sms,retriever</keywords>
+	<engines>
+		<engine name="cordova" version=">=6.0.0" />
+	</engines>
+	<js-module src="www/SMSRetriever.js" name="SMSRetriever">
+		<clobbers target="window.SMSRetriever" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+		<framework src="com.google.android.gms:play-services-auth-api-phone:17.4.0"/>
+		<framework src="com.google.android.gms:play-services-auth:17.0.0"/>
+		<preference name="GradlePluginKotlinEnabled" value="true" />
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="SMSRetriever">
+			<param name="android-package" value="com.proxym.smsretriever.SMSRetriever"/>
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/SMSRetriever.java" target-dir="src/com/proxym/smsretriever" />
+	</platform>
+
+</plugin>
