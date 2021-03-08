@@ -21,7 +21,6 @@
 	<platform name="android">
 		<framework src="com.google.android.gms:play-services-auth-api-phone:17.4.0"/>
 		<framework src="com.google.android.gms:play-services-auth:17.0.0"/>
-		<preference name="GradlePluginKotlinEnabled" value="true" />
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="SMSRetriever">
 			<param name="android-package" value="com.proxym.smsretriever.SMSRetriever"/>
